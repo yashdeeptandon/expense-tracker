@@ -1,10 +1,9 @@
-import "./App.css";
-import { Button } from "./components/ui/button";
+import './App.css';
 
 function App() {
   return (
-    <main>
-      <Button>React App</Button>
+    <main className="w-screen h-screen p-5">
+      <p className="text-black text-2xl">Hello, World!</p>
     </main>
   );
 }
