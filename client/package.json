@@ -6,9 +6,10 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "lint": "eslint .",
+    "lint": "eslint ./src --ext .tsx,.ts",
+    "format": "prettier --write ./src",
+    "prepare": "husky install",
     "preview": "vite preview",
-    "prepare": "husky",
     "test": "jest"
   },
   "dependencies": {
