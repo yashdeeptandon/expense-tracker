@@ -1,6 +1,7 @@
 // src/router/RouteGuards.tsx
 import { Navigate } from '@tanstack/react-router';
 import { useAuth } from '../context/auth-context';
+import MainLayout from '../layouts/main-layout';
 
 export const PublicRoute = ({ children }: { children: React.ReactNode }) => {
   const { isAuthenticated } = useAuth();
@@ -9,5 +10,10 @@ export const PublicRoute = ({ children }: { children: React.ReactNode }) => {
 
 export const PrivateRoute = ({ children }: { children: React.ReactNode }) => {
   const { isAuthenticated } = useAuth();
-  return isAuthenticated ? <>{children}</> : <Navigate to="/login" />;
+
+  return isAuthenticated ? (
+    <MainLayout>{children}</MainLayout>
+  ) : (
+    <Navigate to="/" />
+  );
 };

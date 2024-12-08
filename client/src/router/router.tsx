@@ -5,28 +5,27 @@ import {
   RouterProvider,
   createRootRoute,
 } from '@tanstack/react-router';
-import MainLayout from '../layouts/main-layout';
 import { PublicRoute, PrivateRoute } from './route-guards';
+import Login from '@/components/specific/login/login';
 
-// Define the root route with MainLayout
-const rootRoute = createRootRoute({
-  component: MainLayout,
-});
+// Define the root route
+// src/router/router.tsx
+const rootRoute = createRootRoute();
 
 // Define public routes
 const loginRoute = createRoute({
   getParentRoute: () => rootRoute,
-  path: '/login',
+  path: '/',
   component: () => (
     <PublicRoute>
-      <div>Login</div>
+      <Login />
     </PublicRoute>
   ),
 });
 
 const signupRoute = createRoute({
   getParentRoute: () => rootRoute,
-  path: '/signup',
+  path: 'signup',
   component: () => (
     <PublicRoute>
       <div>Signup</div>
@@ -37,7 +36,7 @@ const signupRoute = createRoute({
 // Define private routes
 const dashboardRoute = createRoute({
   getParentRoute: () => rootRoute,
-  path: '/dashboard',
+  path: 'dashboard',
   component: () => (
     <PrivateRoute>
       <div>Dashboard</div>
@@ -47,7 +46,7 @@ const dashboardRoute = createRoute({
 
 const profileRoute = createRoute({
   getParentRoute: () => rootRoute,
-  path: '/profile',
+  path: 'profile',
   component: () => (
     <PrivateRoute>
       <div>Signup</div>
