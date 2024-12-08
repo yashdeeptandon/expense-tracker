@@ -1,10 +1,11 @@
 import './App.css';
+import MainLayout from './layouts/main-layout';
 
 function App() {
   return (
-    <main className="w-screen h-screen p-5">
-      <p className="text-black text-2xl">Hello, World!</p>
-    </main>
+    <MainLayout>
+      <main className="w-full h-full p-2">Hi There</main>
+    </MainLayout>
   );
 }
 
