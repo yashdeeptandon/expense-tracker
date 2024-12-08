@@ -15,31 +15,11 @@ import {
 
 // Menu items.
 const items = [
-  {
-    title: 'Home',
-    url: '#',
-    icon: Home,
-  },
-  {
-    title: 'Inbox',
-    url: '#',
-    icon: Inbox,
-  },
-  {
-    title: 'Calendar',
-    url: '#',
-    icon: Calendar,
-  },
-  {
-    title: 'Search',
-    url: '#',
-    icon: Search,
-  },
-  {
-    title: 'Settings',
-    url: '#',
-    icon: Settings,
-  },
+  { title: 'Home', url: '/', icon: Home },
+  { title: 'Inbox', url: '/inbox', icon: Inbox },
+  { title: 'Calendar', url: '/calendar', icon: Calendar },
+  { title: 'Search', url: '/search', icon: Search },
+  { title: 'Settings', url: '/settings', icon: Settings },
 ];
 
 export function AppSidebar() {

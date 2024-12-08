@@ -1,12 +1,8 @@
 import './App.css';
-import MainLayout from './layouts/main-layout';
+import { AppRouter } from './router/router';
 
 function App() {
-  return (
-    <MainLayout>
-      <main className="w-full h-full p-2">Hi There</main>
-    </MainLayout>
-  );
+  return <AppRouter />;
 }
 
 export default App;
