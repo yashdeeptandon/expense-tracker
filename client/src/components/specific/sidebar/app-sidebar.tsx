@@ -15,7 +15,7 @@ import {
 
 // Menu items.
 const items = [
-  { title: 'Home', url: '/', icon: Home },
+  { title: 'Home', url: '/home', icon: Home },
   { title: 'Inbox', url: '/inbox', icon: Inbox },
   { title: 'Calendar', url: '/calendar', icon: Calendar },
   { title: 'Search', url: '/search', icon: Search },

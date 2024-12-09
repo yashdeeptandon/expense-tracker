@@ -34,6 +34,16 @@ const signupRoute = createRoute({
 });
 
 // Define private routes
+const homeRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: 'home',
+  component: () => (
+    <PrivateRoute>
+      <div>Dashboard</div>
+    </PrivateRoute>
+  ),
+});
+
 const dashboardRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: 'dashboard',
@@ -46,7 +56,7 @@ const dashboardRoute = createRoute({
 
 const profileRoute = createRoute({
   getParentRoute: () => rootRoute,
-  path: 'profile',
+  path: 'inbox',
   component: () => (
     <PrivateRoute>
       <div>Signup</div>
@@ -60,6 +70,7 @@ const routeTree = rootRoute.addChildren([
   signupRoute,
   dashboardRoute,
   profileRoute,
+  homeRoute,
 ]);
 
 // Create the router
